@@ -66,6 +66,6 @@
 	<scm>
 		<url>https://github.com/tableonthewall/school-management-resp-api-service-client</url>
 		<connection>scm:git:https://github.com/tableonthewall/school-management-resp-api-service-client.git</connection>
-	  <tag>base-0.0.1</tag>
+	  <tag>HEAD</tag>
   </scm>
 </project>
