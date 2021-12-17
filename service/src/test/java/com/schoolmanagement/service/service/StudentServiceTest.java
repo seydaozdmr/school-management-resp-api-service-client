@@ -55,23 +55,4 @@ class StudentServiceTest {
 
 
     }
-
-    @org.junit.Test
-    public void testFindAll() {
-        StudentDto s1=new StudentDto(1,"ali","veli", LocalDate.of(2000,10,9));
-        StudentDto s2=new StudentDto(2,"murat","şeker",LocalDate.of(1987,2,3));
-
-        List<StudentDto> students= Arrays.asList(s1,s2);
-        when(service.findAll()).thenReturn(students);
-
-        try {
-            mockMvc.perform(MockMvcRequestBuilders
-                    .get("/getStudents")
-                    .contentType(MediaType.APPLICATION_JSON))
-                    .andExpect(jsonPath("$.students",hasSize(2)));
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-
-    }
 }
